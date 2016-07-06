@@ -397,8 +397,8 @@ JSQMessagesKeyboardControllerDelegate>
 
     [[NSNotificationCenter defaultCenter] postNotificationName:UITextViewTextDidChangeNotification object:textView];
 
-    [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
-    [self.collectionView reloadData];
+    //[self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
+    //[self.collectionView reloadData];
 
     if (self.automaticallyScrollsToMostRecentMessage) {
         [self scrollToBottomAnimated:animated];
@@ -414,8 +414,8 @@ JSQMessagesKeyboardControllerDelegate>
 
     self.showTypingIndicator = NO;
 
-    [self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
-    [self.collectionView reloadData];
+    //[self.collectionView.collectionViewLayout invalidateLayoutWithContext:[JSQMessagesCollectionViewFlowLayoutInvalidationContext context]];
+    //[self.collectionView reloadData];
 
     if (self.automaticallyScrollsToMostRecentMessage && ![self jsq_isMenuVisible]) {
         [self scrollToBottomAnimated:animated];

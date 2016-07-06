@@ -78,4 +78,11 @@
  */
 - (NSUInteger)mediaHash;
 
+@optional
+/**
+  +* @return A string defining the mimeType represented by the JSQMessageMediaData
+  +*/
+- (NSString *)mimeType;
+
+
 @end
