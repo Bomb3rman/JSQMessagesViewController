@@ -641,6 +641,7 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
 - (BOOL)collectionView:(JSQMessagesCollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //  disable menu for media messages
+    self.selectedIndexPathForMenu = indexPath;
     id<JSQMessageData> messageItem = [collectionView.dataSource collectionView:collectionView messageDataForItemAtIndexPath:indexPath];
     if ([messageItem isMediaMessage]) {
 
@@ -649,8 +650,6 @@ static void JSQInstallWorkaroundForSheetPresentationIssue26295020(void) {
         }
         return NO;
     }
-
-    self.selectedIndexPathForMenu = indexPath;
 
     //  textviews are selectable to allow data detectors
     //  however, this allows the 'copy, define, select' UIMenuController to show
